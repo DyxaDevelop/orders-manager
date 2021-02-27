@@ -1,0 +1,32 @@
+{
+  "1": {
+    "OrderID": 1,
+    "KontrahentID": 5,
+    "ProduktID": 5,
+    "CenaNetto": 18.99,
+    "Ilosc": 1,
+    "DataZamowienia": "11/23/2020 12:22:02 AM",
+    "DataWyslania": "11/25/2020 12:22:02 AM",
+    "Status": "Accepted"
+  },
+  "2": {
+    "OrderID": 2,
+    "KontrahentID": 5,
+    "ProduktID": 2,
+    "CenaNetto": 49.95,
+    "Ilosc": 5,
+    "DataZamowienia": "11/23/2020 1:45:22 AM",
+    "DataWyslania": "11/25/2020 1:45:22 AM",
+    "Status": "Accepted"
+  },
+  "3": {
+    "OrderID": 3,
+    "KontrahentID": 5,
+    "ProduktID": 4,
+    "CenaNetto": 7519.8,
+    "Ilosc": 20,
+    "DataZamowienia": "11/23/2020 1:45:52 AM",
+    "DataWyslania": "11/25/2020 1:45:52 AM",
+    "Status": "Accepted"
+  }
+}

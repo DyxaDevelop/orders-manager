@@ -1,0 +1,35 @@
+{
+  "1": {
+    "FakturaID": 1,
+    "OrderID": 1,
+    "DataWystawienia": "11/23/2020 12:22:02 AM",
+    "SposobOplaty": "Google Pay",
+    "NIP": "863-256-93-01",
+    "CenaNetto": 18.99,
+    "Ilosc": 1,
+    "StawkaVAT": "23%",
+    "CenaZVAT": 23.36
+  },
+  "2": {
+    "FakturaID": 2,
+    "OrderID": 2,
+    "DataWystawienia": "11/23/2020 1:45:23 AM",
+    "SposobOplaty": "Google Pay",
+    "NIP": "751-831-22-91",
+    "CenaNetto": 49.95,
+    "Ilosc": 5,
+    "StawkaVAT": "23%",
+    "CenaZVAT": 61.44
+  },
+  "3": {
+    "FakturaID": 3,
+    "OrderID": 3,
+    "DataWystawienia": "11/23/2020 1:45:52 AM",
+    "SposobOplaty": "Gotówka",
+    "NIP": "125-241-24-12",
+    "CenaNetto": 7519.8,
+    "Ilosc": 20,
+    "StawkaVAT": "23%",
+    "CenaZVAT": 9249.35
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: cornsilk;
+        }
+
+        .order {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: burlywood;
+            margin-bottom: 10px;
+            cursor: pointer;
+            height: fit-content;
+            transition: all 1s ease;
+        }
+
+        .order:hover {
+            background-color: chocolate;
+            color: #ffffff;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    </a>
+    <script>
+        fetch(`/all`)
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data);
+                for (let i = 0; i < data.length; i++) {
+                    document.body.innerHTML += `<a href="./template"><div class="order" order-id="${data[i].OrderID}" buyer-id="${data[i].KontrahentID}">
+                                                            <p>Order ID: ${data[i].OrderID}</p>
+                                                            <p>Buyer ID: ${data[i].KontrahentID}</p>
+                                                            <p>Status order: ${data[i].Status}</p>
+                                                        </div></a>`
+                }
+                document.querySelectorAll('.order').forEach(element => {
+                    element.onclick = (e) => {
+                        let order = e.target.getAttribute('order-id');
+                        let buyer = e.target.getAttribute('buyer-id');
+                        localStorage.setItem('order', order);
+                        localStorage.setItem('buyer', buyer);
+                        console.log(localStorage.getItem('order'));
+                        console.log(localStorage.getItem('buyer'));
+                    }
+                });
+            });
+    </script>
+</body>
+
+</html>

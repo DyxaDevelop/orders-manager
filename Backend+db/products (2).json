@@ -1,0 +1,52 @@
+{
+    "1": {
+        "ProduktID": 1,
+        "Producent": "Pringles",
+        "Nazwa": "Chips",
+        "Rozmiar": 1,
+        "CenaNetto": 5.99,
+        "DostepnaIlosc": 3680,
+        "KrajPochodzenia": "Portugalia",
+        "Opis": "Bekonowy smak"
+    },
+    "2": {
+        "ProduktID": 2,
+        "Producent": "Sven",
+        "Nazwa": "Mouse",
+        "Rozmiar": 1,
+        "CenaNetto": 9.99,
+        "DostepnaIlosc": 9023,
+        "KrajPochodzenia": "Portugalia",
+        "Opis": "3500 dpi"
+    },
+    "3": {
+        "ProduktID": 3,
+        "Producent": "Apple",
+        "Nazwa": "MacBook",
+        "Rozmiar": 3,
+        "CenaNetto": 1500,
+        "DostepnaIlosc": 127,
+        "KrajPochodzenia": "China",
+        "Opis": "2020 rok"
+    },
+    "4": {
+        "ProduktID": 4,
+        "Producent": "Samsung",
+        "Nazwa": "Galaxy S8",
+        "Rozmiar": 1,
+        "CenaNetto": 375.99,
+        "DostepnaIlosc": 96,
+        "KrajPochodzenia": "USA",
+        "Opis": "12mp Camera"
+    },
+    "5": {
+        "ProduktID": 5,
+        "Producent": "Microsoft",
+        "Nazwa": "Windows",
+        "Rozmiar": 1,
+        "CenaNetto": 18.99,
+        "DostepnaIlosc": 10000,
+        "KrajPochodzenia": "USA",
+        "Opis": "Home Version"
+    },
+}

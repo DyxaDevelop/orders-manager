@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .first-block {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .second-block {
+            display: flex;
+            padding-left: 50px;
+        }
+
+        .seller {
+            margin-right: 650px;
+        }
+
+        .dates {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+
+        .faktura-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        th {
+            border: 1px solid black;
+            background-color: #dcdcdc;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .second-block {
+            margin-bottom: 50px;
+        }
+
+        .price {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .items-table {
+            margin-bottom: 150px;
+        }
+    </style>
+    <div class="first-block">
+        <div class="logo">
+            <img src="https://www.designevo.com/res/templates/thumb_small/overlapping-red-and-blue-circle.png" alt="">
+        </div>
+        <div class="faktura-info">
+
+        </div>
+    </div>
+    <div class="second-block">
+        <div class="seller">
+            <h1>SPRZEDAWCA</h1>
+            <h5>Company Name - Jan Kowalski</h5>
+            <p>Rzeszow, Okulickiego 11</p>
+            <p>Polska</p>
+            <p>35-222</p>
+            <p>example.email@gmail.com</p>
+            <p>01 2345 6789 1011 1213 1415</p>
+        </div>
+        <div class="buyer">
+        </div>
+    </div>
+    <div class="items-table">
+        <table style="width:100%">
+            <tr>
+                <th>Nazwa</th>
+                <th>Ilosc</th>
+                <th>Cena netto</th>
+                <th>Wartosc netto</th>
+                <th>Stawka VAT</th>
+                <th>Kwota VAT</th>
+                <th>Wartosc brutto</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let order = localStorage.getItem('order');
+        let buyer = localStorage.getItem('buyer');
+        fetch(`/faktura?order=${order}&buyer=${buyer}`)
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data)
+                document.querySelector('.buyer').innerHTML = `
+                    <h1>NABYWCA</h1>
+                <h5>${data[0][0].Imie} ${data[0][0].Nazwisko}</h5>
+                <p>${data[0][0].Telefon}</p>
+                <p>${data[0][0].Adresa}</p>
+                <p>${data[0][0].Miasto} ${data[0][0].Powiat}</p>
+                <p>${data[0][0].KodPocztowy}</p>
+                <p>${data[0][0].Kraj}</p>`
+                document.querySelector('.faktura-info').innerHTML = `
+                        <h1>FAKTURA nr ${data[1][0].OrderID}</h1>
+                    <div class="dates">
+                        <p>data wystawienie:</p>
+                        <h5> ${(data[1][0].DataZamowienia).substr(0, 10)}</h5>
+                    </div>
+                    <div class="dates">
+                        <p>data dostawy:</p>
+                        <h5> ${(data[1][0].DataWyslania).substr(0, 10)}</h5>
+                    </div>
+                `
+                let countOrder = '';
+                for (let i = 0; i < data[2].length; i++) {
+                    fetch(`/produkt?id=${data[2][i].ProduktID}`)
+                        .then(response => response.json())
+                        .then((data1) => {
+                            document.querySelector('table').innerHTML += `
+                            <tr>
+                <td>${data1[0].Nazwa}</td>
+                <td>${data[2][i].Ilosc}</td>
+                <td>${data1[0].CenaNetto} ZL</td>
+                <td>${+(data1[0].CenaNetto) * +(data[2][i].Ilosc)} ZL</td>
+                <td>${data1[0].StawkaVAT} %</td>
+                <td>${data1[0].KwotaVAT * data[2][i].Ilosc} ZL </td>
+                <td>${(+(data1[0].CenaNetto) * +(data[2][i].Ilosc)) + data1[0].KwotaVAT} ZL</td>
+            </tr>`
+                        })
+
+                }
+
+            });
+    </script>
+</body>
+
+</html>

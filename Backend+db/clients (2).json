@@ -1,0 +1,57 @@
+{
+    "1": {
+        "KontrahentID": 1,
+        "Imie": "Mark",
+        "Nazwisko": "Jordan",
+        "Telefon": "8-312-342-35-32",
+        "Adresa": "ul.Okulickiego, 32",
+        "Miasto": "Warszawa",
+        "Powiat": "Warszawski",
+        "KodPocztowy": 35123,
+        "Kraj": "Polska"
+    },
+    "2": {
+        "KontrahentID": 2,
+        "Imie": "Adrian",
+        "Nazwisko": "Kwiatowski",
+        "Telefon": "8-232-232-82-35",
+        "Adresa": "ul.Polawskiego, 5",
+        "Miasto": "Lańcut",
+        "Powiat": "Lańcut",
+        "KodPocztowy": 37122,
+        "Kraj": "Polska"
+    },
+    "3": {
+        "KontrahentID": 3,
+        "Imie": "Jan",
+        "Nazwisko": "Kowalski",
+        "Telefon": "8-800-555-35-35",
+        "Adresa": "ul.Jakiegoskiego, 2",
+        "Miasto": "Rzeszów",
+        "Powiat": "Rzeszowski",
+        "KodPocztowy": 35444,
+        "Kraj": "Polska"
+    },
+    "4": {
+        "KontrahentID": 4,
+        "Imie": "Lukasz",
+        "Nazwisko": "Mazowiecki",
+        "Telefon": "8-900-555-23-35",
+        "Adresa": "ul.Stoja, 2",
+        "Miasto": "Gdańsk",
+        "Powiat": "Gdański",
+        "KodPocztowy": 35444,
+        "Kraj": "Polska"
+    },
+    "5": {
+        "KontrahentID": 5,
+        "Imie": "Jan",
+        "Nazwisko": "Adamski",
+        "Telefon": "8-877-885-31-21",
+        "Adresa": "ul.Rynek, 90",
+        "Miasto": "Gdynia",
+        "Powiat": "Gdyński",
+        "KodPocztowy": 35186,
+        "Kraj": "Polska"
+    }
+}
