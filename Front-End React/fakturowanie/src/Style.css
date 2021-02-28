@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.App {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #343A51;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
+.main-block {
+    width: 40%;
+    height: 700px;
+    left: 305px;
+    top: 152px;
+    background: #0C0B17;
+    border: 2px solid #151328;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow: scroll;
+}
+.steps {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: #343A51;
+    font-size: 10px;
+    color: #ffffff;
+    margin: 0 10px;
+}
+.active-step {
+    width: 35px;
+    height: 35px;
+    background-color: #E31918;
+    font-size: 15px;
+}
+.main-legend {
+    margin-top: 20px;
+    font-size: 25px;
+    color: #ffffff;
+}
+.red {
+    color: #D03429;
+}
+.none {
+    display: none!important;
+}
+.create-block {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 35px;
+    padding-right: 5%;
+    height: 70%;
+}
+input, select  {
+    border: none;
+    background: #C4C4C4;
+    border-radius: 20px;
+    max-width: 100%;
+    font-size: 18px;
+    height: 50px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+label {
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+.next-btn {
+    width: 200px;
+    height: 58px;
+    background: #E41818;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: 3px solid transparent;
+    margin: 0 auto;
+    align-self: flex-end;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.next-btn:hover, .add-btn:hover {
+    background-color: transparent;
+    color: #E41818;
+    border: 3px solid #E41818;
+}
+.block-btn {
+    display: flex;
+    justify-content: center;
+}
+ul {
+    padding: 0;
+}
+.products-list > li {
+    color: #ffffff;
+    padding: 15px 15px;
+    border-radius: 20px;
+    background-color: #353A4F;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span {
+    text-align: center;
+}
+.orders {
+    height: 400px;
+    overflow: scroll;
+}
+.block-btn{
+    margin-top: 15px;
+}
+.count {
+    width: 30%;
+}
+.label-count {
+    display: block;
+}
+.add-btn {
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #E41818;
+    border-radius: 20px;
+    height: 50px;
+    width: 60%;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+.count-items{
+    display: flex;
+    justify-content: space-between;
+}
+.products-list>li:hover {
+    background-color: #535976;
+}
+.info-in {
+    padding-bottom: 10px;
+    color: #ffffff;
+    border-bottom: 1px solid #DEDAFF;
+    width: 200px;
+    font-size: 10px;
+    margin-bottom: 25px;
+}
+.invoice-info {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.invoice-block > p {
+    color: #C4C4C4;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.155em;
+    text-align: center;
+}
+.list-of-invoices{
+    height: 550px;
+    flex-direction: column;
+    display: flex;
+    overflow: scroll;
+}
+.invoice-block {
+    background-color: transparent;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+.invoice-block:hover {
+    background-color: #10101D;
+    
+}
+.show-invoice {
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    display: none;
+    width: 121px;
+    height: 29px;
+    left: 1759px;
+    top: 891px;
+    border: 0;
+    color: #ffffff;
+    background: #E41818;
+    border-radius: 15px;
+    align-self: flex-end;
+    margin-bottom: 15px;
+    margin-right: 5%;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.show-invoice:hover {
+    background-color: transparent;
+    border: 1px solid #E41818;
+    color: #E41818;
+}
+.invoice-block:hover .show-invoice{
+    transition: all 0.3s ease-in;
+    opacity: 1;
+}
+.elements-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input:active, select:active{
+    border: 0;
+    background-color: #ffffff;
+}
+input:focus, select:focus {
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+}
+.next-btn:focus {
+    outline: 0;
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.first-block {
+  display: flex;
+  justify-content: space-around;
+}
+
+.second-block {
+  display: flex;
+  padding-left: 50px;
+}
+
+.seller {
+  margin-right: 650px;
+}
+
+.dates {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.dates > div {
+  display: flex;
+  margin-top: 20px;
+}
+
+p {
+  margin: 0;
+
+}
+.wart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wartosc {
+  font-size: 20px;
+  margin-top: 20px;
+  width: fit-content;
+  padding-bottom: 2px;
+  border-bottom: 1px solid black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.faktura-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+th {
+  border: 1px solid black;
+  background-color: #dcdcdc;
+}
+
+td {
+  text-align: center;
+}
+
+.second-block {
+  margin-bottom: 50px;
+}
+
+.price {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-table {
+  margin-bottom: 150px;
+}
